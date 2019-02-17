@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Card from "./components/Card";
 import { NotificationIcon } from "./components/Icons";
 import Logo from "./components/Logo";
+import Project from "./components/Project";
 
 export default class App extends React.Component {
   render() {
@@ -28,11 +29,9 @@ export default class App extends React.Component {
               }}
               horizontal={true}
             >
-              <Logo
-                image={require("./assets/logo-framerx.png")}
-                text="Framer X"
-              />
-              <Logo image={require("./assets/logo-figma.png")} text="Figma" />
+              {logos.map((logo, index) => (
+                <Logo key={index} image={logo.image} text={logo.text} />
+              ))}
             </ScrollView>
             <SubTitle>See Blog Posts</SubTitle>
             <ScrollView
@@ -40,27 +39,31 @@ export default class App extends React.Component {
               style={{ paddingBottom: 30 }}
               showsHorizontalScrollIndicator={false}
             >
-              <Card
-                title="Blog Post"
-                image={require("./assets/background2.jpg")}
-                caption="Caption Text"
-                logo={require("./assets/logo-react.png")}
-                subtitle="Subtitle Text"
-              />
-              <Card
-                title="Blog Post"
-                image={require("./assets/background2.jpg")}
-                caption="Caption Text"
-                logo={require("./assets/logo-react.png")}
-                subtitle="Subtitle Text"
-              />
-              <Card
-                title="Blog Post"
-                image={require("./assets/background2.jpg")}
-                caption="Caption Text"
-                logo={require("./assets/logo-react.png")}
-                subtitle="Subtitle Text"
-              />
+              {cards.map((card, index) => (
+                <Card
+                  key={index}
+                  title={card.title}
+                  image={card.image}
+                  subtitle={card.subtitle}
+                  caption={card.caption}
+                  logo={card.logo}
+                />
+              ))}
+            </ScrollView>
+            <ScrollView>
+              <SubTitle>See Projects</SubTitle>
+              {projects.map((project, index) => (
+                <Project
+                  key={index}
+                  image={project.image}
+                  title={project.title}
+                  subtitle={project.subtitle}
+                  logo={project.logo}
+                  author={project.author}
+                  avatar={project.avatar}
+                  caption={project.caption}
+                />
+              ))}
             </ScrollView>
           </ScrollView>
         </SafeAreaView>
@@ -111,3 +114,73 @@ const TitleBar = styled.View`
   margin-top: 50px;
   padding-left: 80px;
 `;
+
+const logos = [
+  {
+    image: require("./assets/logo-framerx.png"),
+    text: "Framer X"
+  },
+  {
+    image: require("./assets/logo-figma.png"),
+    text: "Figma"
+  },
+  {
+    image: require("./assets/logo-studio.png"),
+    text: "Studio"
+  },
+  {
+    image: require("./assets/logo-react.png"),
+    text: "React"
+  },
+  {
+    image: require("./assets/logo-swift.png"),
+    text: "Swift"
+  },
+  {
+    image: require("./assets/logo-sketch.png"),
+    text: "Sketch"
+  }
+];
+
+const cards = [
+  {
+    title: "Blog Post 1",
+    image: require("./assets/background11.jpg"),
+    subtitle: "subtitle",
+    caption: "caption",
+    logo: require("./assets/logo-react.png")
+  },
+  {
+    title: "Blog Post 2",
+    image: require("./assets/background12.jpg"),
+    subtitle: "subtitle",
+    caption: "caption",
+    logo: require("./assets/logo-react.png")
+  },
+  {
+    title: "Blog Post 3",
+    image: require("./assets/background13.jpg"),
+    subtitle: "subtitle",
+    caption: "caption",
+    logo: require("./assets/logo-react.png")
+  },
+  {
+    title: "Blog Post 4",
+    image: require("./assets/background14.jpg"),
+    subtitle: "subtitle",
+    caption: "caption",
+    logo: require("./assets/logo-react.png")
+  }
+];
+
+const projects = [
+  {
+    title: "Tess",
+    subtitle: "A podcasting app",
+    image: require("./assets/background13.jpg"),
+    logo: require("./assets/logo-studio.png"),
+    author: "Tess Technologies Team",
+    avatar: require("./assets/avatar.jpg"),
+    caption: "Create your own podcast on mobile."
+  }
+];
