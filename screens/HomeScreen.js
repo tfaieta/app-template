@@ -130,7 +130,6 @@ class HomeScreen extends React.Component {
                       image={card.image}
                       subtitle={card.subtitle}
                       caption={card.caption}
-                      logo={card.logo}
                     />
                   </TouchableOpacity>
                 ))}
@@ -213,28 +212,28 @@ const TitleBar = styled.View`
 
 const logos = [
   {
-    image: require("../assets/logo-framerx.png"),
-    text: "Framer X"
-  },
-  {
-    image: require("../assets/logo-figma.png"),
-    text: "Figma"
-  },
-  {
-    image: require("../assets/logo-studio.png"),
-    text: "Studio"
-  },
-  {
     image: require("../assets/logo-react.png"),
     text: "React"
   },
   {
-    image: require("../assets/logo-swift.png"),
-    text: "Swift"
+    image: require("../assets/logo-ts.png"),
+    text: "Typescript"
   },
   {
-    image: require("../assets/logo-sketch.png"),
-    text: "Sketch"
+    image: require("../assets/logo-cpp.png"),
+    text: "C++"
+  },
+  {
+    image: require("../assets/logo-electron.png"),
+    text: "Electron"
+  },
+  {
+    image: require("../assets/logo-gql.png"),
+    text: "GraphQL"
+  },
+  {
+    image: require("../assets/logo-py.png"),
+    text: "Python"
   }
 ];
 
@@ -243,8 +242,7 @@ const cards = [
     title: "Not everything project is a supposed to turn into a startup",
     image: require("../assets/solid-bg.jpg"),
     subtitle: "Keep Creating",
-    caption: "Reflections",
-    logo: require("../assets/logo-twitter.png")
+    caption: "Reflections"
   }
 ];
 

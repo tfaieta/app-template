@@ -8,7 +8,6 @@ const Card = props => (
       <Title>{props.title}</Title>
     </Cover>
     <Content>
-      <Logo source={props.logo} />
       <Wrapper>
         <Caption>{props.caption}</Caption>
         <Subtitle>{props.subtitle}</Subtitle>
@@ -46,7 +45,7 @@ const Subtitle = styled.Text`
 `;
 
 const Wrapper = styled.View`
-  margin-left: 10px;
+  margin-left: 0px;
 `;
 
 const Container = styled.View`
