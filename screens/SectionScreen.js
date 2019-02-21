@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { StatusBar, TouchableOpacity, ScrollView } from "react-native";
 import { Icon } from "expo";
 import Markdown from "react-native-showdown";
+import { mdContent } from "../content/BlogContent";
 
 class SectionScreen extends React.Component {
   static navigationOptions = {
@@ -20,7 +21,6 @@ class SectionScreen extends React.Component {
   render() {
     const { navigation } = this.props;
     const section = navigation.getParam("section");
-    const mdContent = "The book is an in-depth account of Twitters";
 
     return (
       <ScrollView>

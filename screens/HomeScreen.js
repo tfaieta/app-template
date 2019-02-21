@@ -94,10 +94,8 @@ class HomeScreen extends React.Component {
                 </TouchableOpacity>
                 <Name>Tony Faieta</Name>
                 <Title>Maker of things, student at UF 🐊</Title>
-                <NotificationIcon
-                  style={{ position: "absolute", right: 20, top: 5 }}
-                />
               </TitleBar>
+              <SubTitle>Skills</SubTitle>
               <ScrollView
                 style={{
                   flexDirection: "row",
@@ -242,32 +240,11 @@ const logos = [
 
 const cards = [
   {
-    title: "Notes on Twitter",
-    image: require("../assets/background11.jpg"),
-    subtitle: "",
-    caption: "",
+    title: "Not everything project is a supposed to turn into a startup",
+    image: require("../assets/solid-bg.jpg"),
+    subtitle: "Keep Creating",
+    caption: "Reflections",
     logo: require("../assets/logo-twitter.png")
-  },
-  {
-    title: "Blog Post 2",
-    image: require("../assets/background12.jpg"),
-    subtitle: "subtitle",
-    caption: "caption",
-    logo: require("../assets/logo-react.png")
-  },
-  {
-    title: "Blog Post 3",
-    image: require("../assets/background13.jpg"),
-    subtitle: "subtitle",
-    caption: "caption",
-    logo: require("../assets/logo-react.png")
-  },
-  {
-    title: "Blog Post 4",
-    image: require("../assets/background14.jpg"),
-    subtitle: "subtitle",
-    caption: "caption",
-    logo: require("../assets/logo-react.png")
   }
 ];
 
@@ -275,10 +252,9 @@ const projects = [
   {
     title: "Tess",
     subtitle: "A podcasting app",
-    image: require("../assets/background13.jpg"),
-    logo: require("../assets/logo-studio.png"),
+    image: require("../assets/solidBG2.jpg"),
     author: "Tess Technologies Team",
-    avatar: require("../assets/avatar.jpg"),
+    avatar: require("../assets/tessFM.png"),
     caption: "Create your own podcast on mobile."
   }
 ];
